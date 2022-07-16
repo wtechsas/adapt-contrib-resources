@@ -1,0 +1,248 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "required": false,
+  "globals": {
+    "resources": {
+      "type": "string",
+      "required": true,
+      "title": "Recursos adicionales",
+      "default": "Recursos adicionales.",
+      "inputType": "Text",
+      "validators": [],
+      "translatable": true
+    }
+  },
+  "properties": {
+    "pluginLocations": {
+      "type": "object",
+      "required": true,
+      "properties": {
+        "config": {
+          "type": "object"
+        },
+        "course": {
+          "type": "object",
+          "properties": {
+            "_resources": {
+              "type": "object",
+              "required": false,
+              "legend": "Recursos adicionales",
+              "properties": {
+                "_isEnabled": {
+                  "type": "boolean",
+                  "required": true,
+                  "default": true,
+                  "title": "¿Habilitado?",
+                  "inputType": "Checkbox",
+                  "validators": [],
+                  "help": "Controla si la extensión Recursos adicionales está habilitada o deshabilitada."
+                },
+                "_drawerOrder": {
+                  "type": "number",
+                  "required": false,
+                  "title": "Orden",
+                  "inputType": "Number",
+                  "default": 0,
+                  "help": "Orden en el que la extensión debe aparecer como elemento",
+                  "validators": [
+                    "number"
+                  ]
+                },
+                "title": {
+                  "type": "string",
+                  "default": "Recursos adicionales",
+                  "required": true,
+                  "title": "Título",
+                  "inputType": "Text",
+                  "validators": [
+                    "required"
+                  ],
+                  "translatable": true
+                },
+                "description": {
+                  "type": "string",
+                  "default": "Aquí se pueden ver los recursos adicionales de este curso",
+                  "required": false,
+                  "title": "Descripción",
+                  "inputType": "Text",
+                  "validators": [],
+                  "translatable": true
+                },
+                "_filterButtons": {
+                  "type": "object",
+                  "title": "Botones para filtrar",
+                  "properties": {
+                    "all": {
+                      "type": "string",
+                      "default": "Todos",
+                      "title": "Todos los recursos",
+                      "inputType": "Text",
+                      "validators": [],
+                      "translatable": true
+                    },
+                    "document": {
+                      "type": "string",
+                      "default": "Documentos",
+                      "title": "Documentos",
+                      "inputType": "Text",
+                      "validators": [],
+                      "translatable": true
+                    },
+                    "media": {
+                      "type": "string",
+                      "default": "Recursos multimedia",
+                      "title": "Multimedia",
+                      "inputType": "Text",
+                      "validators": [],
+                      "translatable": true
+                    },
+                    "link": {
+                      "type": "string",
+                      "default": "Enlaces",
+                      "title": "Enlaces",
+                      "inputType": "Text",
+                      "validators": [],
+                      "translatable": true
+                    }
+                  }
+                },
+                "_filterAria": {
+                  "type": "object",
+                  "title": "Etiquetas Aria",
+                  "properties": {
+                    "allAria": {
+                      "type": "string",
+                      "default": "Ver todos los recursos",
+                      "title": "Todos los recursos",
+                      "inputType": "Text",
+                      "validators": [],
+                      "translatable": true
+                    },
+                    "documentAria": {
+                      "type": "string",
+                      "default": "Ver recursos de documentos",
+                      "title": "Documentos",
+                      "inputType": "Text",
+                      "validators": [],
+                      "translatable": true
+                    },
+                    "mediaAria": {
+                      "type": "string",
+                      "default": "Ver recursos multimedia",
+                      "title": "Recursos multimedia",
+                      "inputType": "Text",
+                      "validators": [],
+                      "translatable": true
+                    },
+                    "linkAria": {
+                      "type": "string",
+                      "default": "Ver enlaces",
+                      "title": "Enlaces",
+                      "inputType": "Text",
+                      "validators": [],
+                      "translatable": true
+                    }
+                  }
+                },
+                "_resourcesItems": {
+                  "type": "array",
+                  "required": false,
+                  "title": "Elementos de recursos adicionales",
+                  "items": {
+                    "type": "object",
+                    "required": false,
+                    "title": "Recursos adicionales",
+                    "properties": {
+                      "_type": {
+                        "type": "string",
+                        "required": true,
+                        "title": "Tipo de recurso",
+                        "inputType": {
+                          "type": "Select",
+                          "options": [
+                            {
+                              "val": "document",
+                              "label": "Documento"
+                            },
+                            {
+                              "val": "media",
+                              "label": "Multimendia"
+                            },
+                            {
+                              "val": "link",
+                              "label": "Enlace"
+                            }
+                          ]
+                        },
+                        "validators": [
+                          "required"
+                        ]
+                      },
+                      "_forceDownload": {
+                        "type": "boolean",
+                        "default": false,
+                        "title": "Descargar recurso",
+                        "inputType": "Checkbox",
+                        "validators": [],
+                        "help": "Obliga a descargar el recurso en lugar de abrirlo en el navegador. Solo se admite en los navegadores que admiten el atributo 'descargar' y para los recursos que forman parte del contenido del curso/que se alojan en la misma URL."
+                      },
+                      "title": {
+                        "type": "string",
+                        "required": true,
+                        "title": "Título",
+                        "inputType": "Text",
+                        "validators": [
+                          "required"
+                        ],
+                        "translatable": true
+                      },
+                      "filename": {
+                        "type": "string",
+                        "required": false,
+                        "title": "Nombre del archivo",
+                        "inputType": "Text",
+                        "translatable": true,
+                        "help": "Se utiliza para establecer el nombre del archivo descargado en algo diferente al nombre del archivo de origen. Solo se admite en navegadores que admiten el atributo 'descargar' y para recursos que forman parte del contenido del curso/alojados en la misma URL. Obliga a que se descargue el archivo independientemente de la configuración de 'Forzar descarga'."
+                      },
+                      "description": {
+                        "type": "string",
+                        "required": false,
+                        "title": "Descripción",
+                        "inputType": "Text",
+                        "validators": [],
+                        "translatable": true
+                      },
+                      "_link": {
+                        "type": "string",
+                        "required": true,
+                        "title": "Enlace",
+                        "inputType": "Asset",
+                        "validators": [
+                          "required"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "contentobject": {
+          "type": "object"
+        },
+        "article": {
+          "type": "object"
+        },
+        "block": {
+          "type": "object"
+        },
+        "component": {
+          "type": "object"
+        }
+      }
+    }
+  }
+}

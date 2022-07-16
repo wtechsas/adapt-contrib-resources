@@ -1,0 +1,17 @@
+{
+  "name": "adapt-contrib-resources",
+  "version": "10.0.0",
+  "framework": ">=5.19.1",
+  "homepage": "https://github.com/wtechsas/adapt-contrib-resources",
+  "bugs": "https://github.com/wtechsas/adapt-contrib-resources/issues",
+  "extension" : "resources",
+  "displayName" : "Recursos adicionales",
+  "description": "Una extensión que permite a los alumnos ver los recursos adicionales",
+  "main": "/js/adapt-contrib-resources.js",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-extension"
+  ],
+  "license": "GPL-3.0",
+  "targetAttribute": "_resources"
+}
