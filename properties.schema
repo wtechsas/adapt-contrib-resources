@@ -63,7 +63,7 @@
                 },
                 "description": {
                   "type": "string",
-                  "default": "Aquí se pueden ver los recursos adicionales de este curso",
+                  "default": "Aquí se pueden ver los recursos adicionales de este Recurso",
                   "required": false,
                   "title": "Descripción",
                   "inputType": "Text",
@@ -186,7 +186,7 @@
                         "title": "Descargar recurso",
                         "inputType": "Checkbox",
                         "validators": [],
-                        "help": "Obliga a descargar el recurso en lugar de abrirlo en el navegador. Solo se admite en los navegadores que admiten el atributo 'descargar' y para los recursos que forman parte del contenido del curso/que se alojan en la misma URL."
+                        "help": "Obliga a descargar el recurso en lugar de abrirlo en el navegador. Solo se admite en los navegadores que admiten el atributo 'descargar' y para los recursos que forman parte del contenido del Recurso/que se alojan en la misma URL."
                       },
                       "title": {
                         "type": "string",
@@ -204,7 +204,7 @@
                         "title": "Nombre del archivo",
                         "inputType": "Text",
                         "translatable": true,
-                        "help": "Se utiliza para establecer el nombre del archivo descargado en algo diferente al nombre del archivo de origen. Solo se admite en navegadores que admiten el atributo 'descargar' y para recursos que forman parte del contenido del curso/alojados en la misma URL. Obliga a que se descargue el archivo independientemente de la configuración de 'Forzar descarga'."
+                        "help": "Se utiliza para establecer el nombre del archivo descargado en algo diferente al nombre del archivo de origen. Solo se admite en navegadores que admiten el atributo 'descargar' y para recursos que forman parte del contenido del Recurso/alojados en la misma URL. Obliga a que se descargue el archivo independientemente de la configuración de 'Forzar descarga'."
                       },
                       "description": {
                         "type": "string",
