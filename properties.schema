@@ -59,6 +59,7 @@
                   "validators": [
                     "required"
                   ],
+                  "help": "Corresponde al título del recurso adicional.",
                   "translatable": true
                 },
                 "description": {
@@ -68,11 +69,13 @@
                   "title": "Descripción",
                   "inputType": "Text",
                   "validators": [],
+                  "help":"Indica la descripción de los recursos adicionales.",
                   "translatable": true
                 },
                 "_filterButtons": {
                   "type": "object",
                   "title": "Botones para filtrar",
+                  "help": "Establece los textos de los botones para filtrar recursos.",
                   "properties": {
                     "all": {
                       "type": "string",
@@ -80,6 +83,7 @@
                       "title": "Todos los recursos",
                       "inputType": "Text",
                       "validators": [],
+                      "help":"Texto del botón para mostrar todos los recursos.",
                       "translatable": true
                     },
                     "document": {
@@ -88,6 +92,7 @@
                       "title": "Documentos",
                       "inputType": "Text",
                       "validators": [],
+                      "help":"Texto del botón para mostrar los recursos de tipo documento.",
                       "translatable": true
                     },
                     "media": {
@@ -96,6 +101,7 @@
                       "title": "Multimedia",
                       "inputType": "Text",
                       "validators": [],
+                      "help":"Texto del botón para mostrar los recursos de tipo multimedia.",
                       "translatable": true
                     },
                     "link": {
@@ -104,6 +110,7 @@
                       "title": "Enlaces",
                       "inputType": "Text",
                       "validators": [],
+                      "help":"Texto del botón para mostrar los recursos de tipo enlace.",
                       "translatable": true
                     }
                   }
@@ -111,6 +118,7 @@
                 "_filterAria": {
                   "type": "object",
                   "title": "Etiquetas Aria",
+                  "help":"Estable el texto de las etiquetas Aria.",
                   "properties": {
                     "allAria": {
                       "type": "string",
@@ -118,6 +126,7 @@
                       "title": "Todos los recursos",
                       "inputType": "Text",
                       "validators": [],
+                      "help":"Etiqueta Aria para mostrar todos los recursos.",
                       "translatable": true
                     },
                     "documentAria": {
@@ -126,6 +135,7 @@
                       "title": "Documentos",
                       "inputType": "Text",
                       "validators": [],
+                      "help":"Etiqueta Aria para mostrar los recursos de documentos.",
                       "translatable": true
                     },
                     "mediaAria": {
@@ -134,6 +144,7 @@
                       "title": "Recursos multimedia",
                       "inputType": "Text",
                       "validators": [],
+                      "help":"Etiqueta Aria para mostrar los recursos de multimedia.",
                       "translatable": true
                     },
                     "linkAria": {
@@ -142,6 +153,7 @@
                       "title": "Enlaces",
                       "inputType": "Text",
                       "validators": [],
+                      "help":"Etiqueta Aria para mostrar los recursos de enlaces.",
                       "translatable": true
                     }
                   }
@@ -150,6 +162,7 @@
                   "type": "array",
                   "required": false,
                   "title": "Elementos de recursos adicionales",
+                  "help": "Permite agregar nuevos recursos.",
                   "items": {
                     "type": "object",
                     "required": false,
@@ -159,6 +172,7 @@
                         "type": "string",
                         "required": true,
                         "title": "Tipo de recurso",
+                        "help":"Corresponde al tipo de recurso.",
                         "inputType": {
                           "type": "Select",
                           "options": [
@@ -196,6 +210,7 @@
                         "validators": [
                           "required"
                         ],
+                        "help": "Indica el título del recurso adicional.",
                         "translatable": true
                       },
                       "filename": {
@@ -212,6 +227,7 @@
                         "title": "Descripción",
                         "inputType": "Text",
                         "validators": [],
+                        "help":"Indica la descripción del recurso adicional.",
                         "translatable": true
                       },
                       "_link": {
@@ -219,6 +235,7 @@
                         "required": true,
                         "title": "Enlace",
                         "inputType": "Asset",
+                        "help":"Indica el origen del enlace del recurso adicional",
                         "validators": [
                           "required"
                         ]
