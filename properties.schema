@@ -33,7 +33,7 @@
                 "_isEnabled": {
                   "type": "boolean",
                   "required": true,
-                  "default": true,
+                  "default": false,
                   "title": "¿Habilitado?",
                   "inputType": "Checkbox",
                   "validators": [],
